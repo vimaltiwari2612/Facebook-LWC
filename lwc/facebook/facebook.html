@@ -11,13 +11,18 @@
                 <tr>
                     <td><img class="slds-icon slds-icon_medium" src={itm.profilePic} /></td>
                     <td><h2><b> &nbsp; {itm.name}</b></h2></td>
-                 </tr>
+                </tr>
                 </table>
                 <br/>
                  <h3>{itm.status}</h3>
                 <br/>
                 <img class="card-image" src={itm.image} />
-               
+                <br/>
+                <lightning-button-group class="">
+                    <lightning-button label="Like" icon-name="utility:like"></lightning-button>
+                    <lightning-button label="Comment" icon-name="utility:comments"></lightning-button>
+                    <lightning-button label="Share" icon-name="utility:internal_share"></lightning-button>
+                </lightning-button-group>
             </lightning-card>
        
         </template>
