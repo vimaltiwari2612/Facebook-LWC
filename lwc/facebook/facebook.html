@@ -1,4 +1,10 @@
 <template>
+    <div style="
+    height: 600px;
+    overflow-y: auto;
+    background-color: white;
+    padding: 10px;
+">
         <template for:each={receivedMessage.feed} for:item="itm" style="padding: 7px;">
             <lightning-card key={itm.id} >
                 <table style="width:0%">
@@ -11,6 +17,9 @@
                  <h3>{itm.status}</h3>
                 <br/>
                 <img class="card-image" src={itm.image} />
+               
             </lightning-card>
+       
         </template>
+    </div>
 </template>
