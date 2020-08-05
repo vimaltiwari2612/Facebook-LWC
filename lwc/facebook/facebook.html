@@ -1,0 +1,16 @@
+<template>
+        <template for:each={receivedMessage.feed} for:item="itm" style="padding: 7px;">
+            <lightning-card key={itm.id} >
+                <table style="width:0%">
+                <tr>
+                    <td><img class="slds-icon slds-icon_medium" src={itm.profilePic} /></td>
+                    <td><h2><b> &nbsp; {itm.name}</b></h2></td>
+                 </tr>
+                </table>
+                <br/>
+                 <h3>{itm.status}</h3>
+                <br/>
+                <img class="card-image" src={itm.image} />
+            </lightning-card>
+        </template>
+</template>
