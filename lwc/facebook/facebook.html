@@ -6,7 +6,7 @@
     padding: 10px;
 ">
         <template for:each={receivedMessage.feed} for:item="itm" style="padding: 7px;">
-            <lightning-card key={itm.id} >
+            <lightning-card key={itm.id} class="slds-p-around_xxx-small" >
                 <table style="width:0%">
                 <tr>
                     <td><img class="slds-icon slds-icon_medium" src={itm.profilePic} /></td>
@@ -18,10 +18,12 @@
                 <br/>
                 <img class="card-image" src={itm.image} />
                 <br/>
-                <lightning-button-group class="">
-                    <lightning-button label="Like" icon-name="utility:like"></lightning-button>
-                    <lightning-button label="Comment" icon-name="utility:comments"></lightning-button>
-                    <lightning-button label="Share" icon-name="utility:internal_share"></lightning-button>
+                <span>{itm.like} Likes, {itm.comment} Comments, {itm.share} Shares</span>
+                <br/>
+                <lightning-button-group>
+                    <lightning-button label="Like" name={itm.id} icon-name="utility:like" onclick={handleClick}></lightning-button>
+                    <lightning-button label="Comment" name={itm.id}  icon-name="utility:comments" onclick={handleClick}></lightning-button>
+                    <lightning-button label="Share"  name={itm.id} icon-name="utility:internal_share" onclick={handleClick}></lightning-button>
                 </lightning-button-group>
             </lightning-card>
        
